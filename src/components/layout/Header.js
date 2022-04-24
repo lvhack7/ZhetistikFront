@@ -392,31 +392,24 @@ function Header({
                     </Button>
                   </ButtonContainer>
                 </div>
-                <div className="fixed-nav mb-2">
+                {/* <div className="fixed-nav mb-2">
                   <Title level={5}>Navbar Fixed </Title>
                   <Switch onChange={(e) => handleFixedNavbar(e)} />
-                </div>
-                <div className="ant-docment">
-                  <ButtonContainer>
-                    <Button type="black" size="large">
-                      FREE DOWNLOAD
-                    </Button>
-                    <Button size="large">VIEW DOCUMENTATION</Button>
-                  </ButtonContainer>
-                </div>
-                <div className="viewstar">
+                </div> */}
+                {/* <div className="viewstar">
                   <a href="#pablo">{<StarOutlined />} Star</a>
                   <a href="#pablo"> 190</a>
-                </div>
-
-                <div className="ant-thank">
-                  <Title level={5} className="mb-2">
-                    Thank you for sharing!
-                  </Title>
+                </div> */}
+                {/* <div className="ant-thank">
                   <ButtonContainer className="social">
                     <Button type="black">{<TwitterOutlined />}TWEET</Button>
                     <Button type="black">{<FacebookFilled />}SHARE</Button>
                   </ButtonContainer>
+                </div> */}
+                <div style={{ float: 'right', marginTop: '1rem' }}>
+                  <Title level={5}>
+                    Beta version 1.0
+                  </Title>
                 </div>
               </div>
             </div>

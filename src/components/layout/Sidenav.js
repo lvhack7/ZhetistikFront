@@ -215,12 +215,6 @@ function Sidenav({ color }) {
             <span className="label">Sign In</span>
           </NavLink>
         </Menu.Item>
-        <Menu.Item key="8">
-          <NavLink to="/sign-up">
-            <span className="icon">{signup}</span>
-            <span className="label">Sign Up</span>
-          </NavLink>
-        </Menu.Item>
       </Menu>
       <div className="aside-footer">
         <div
@@ -235,7 +229,7 @@ function Sidenav({ color }) {
           <h6>Need Help?</h6>
           <p>Please check our docs</p>
           <Button type="primary" className="ant-btn-sm ant-btn-block">
-            DOCUMENTATION
+            CONTACT US
           </Button>
         </div>
       </div>
