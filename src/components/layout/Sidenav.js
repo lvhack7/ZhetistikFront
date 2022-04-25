@@ -226,8 +226,7 @@ function Sidenav({ color }) {
           <span className="icon" style={{ color }}>
             {dashboard}
           </span>
-          <h6>Need Help?</h6>
-          <p>Please check our docs</p>
+          <h6 style={{marginBottom: '16px'}}>Need Help?</h6>
           <Button type="primary" className="ant-btn-sm ant-btn-block">
             CONTACT US
           </Button>

@@ -33,7 +33,7 @@ import {
 } from "@ant-design/icons";
 
 import BgProfile from "../assets/images/bg-profile.jpg";
-import profilavatar from "../assets/images/face-1.jpg";
+import profilavatar from "../assets/images/user (2).png";
 import convesionImg from "../assets/images/face-3.jpg";
 import convesionImg2 from "../assets/images/face-4.jpg";
 import convesionImg3 from "../assets/images/face-5.jpeg";
@@ -171,11 +171,11 @@ function Profile() {
           <Row justify="space-between" align="middle" gutter={[24, 0]}>
             <Col span={24} md={12} className="col-info">
               <Avatar.Group>
-                <Avatar size={74} shape="square" src={profilavatar} />
+                <Avatar size={56} shape="square" src={profilavatar} />
 
                 <div className="avatar-info">
-                  <h4 className="font-semibold m-0">Sarah Jacob</h4>
-                  <p>CEO / Co-Founder</p>
+                  <h4 className="font-semibold m-0">Abilda Khaknazar</h4>
+                  <p>Programmer</p>
                 </div>
               </Avatar.Group>
             </Col>
@@ -252,10 +252,7 @@ function Profile() {
           >
             <p className="text-dark">
               {" "}
-              Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer
-              is no. If two equally difficult paths, choose the one more painful
-              in the short term (pain avoidance is creating an illusion of
-              equality).{" "}
+              Hi, I’m Abilda Khaknazar, and I like programming ). There are plenty of projects I work on, and share my experience with university application here.{" "}
             </p>
             <hr className="my-25" />
             <Descriptions title="Oliver Liam">
