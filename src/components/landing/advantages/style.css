@@ -1,0 +1,32 @@
+.landing-adv {
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+.adv-head {
+    text-align: center;
+}
+
+.adv-title {
+    color: black;
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.adv-subtitle {
+    color: black;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.advs {
+    padding: 24px;
+    margin-top: 28px;
+}
+
+.icon {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+}
+

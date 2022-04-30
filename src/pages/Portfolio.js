@@ -7,14 +7,21 @@ import {
   List,
   Descriptions,
   Avatar,
+  Input,
+  Image
 } from "antd";
 
+import event1 from "../assets/images/event1.jpg"
 import { PlusOutlined, ExclamationOutlined } from "@ant-design/icons";
 import mastercard from "../assets/images/mastercard-logo.png";
 import paypal from "../assets/images/paypal-logo-2.png";
 import visa from "../assets/images/visa-logo.png";
+import Title from "antd/lib/skeleton/Title";
+
+const { TextArea } = Input
 
 function Portfolio() {
+
   const data = [
     {
       title: "March, 01, 2021",
@@ -308,33 +315,30 @@ function Portfolio() {
 
   return (
     <>
-      <Row gutter={[24, 0]}>
+      <Card
+        title={wifi}
+        bordered={false}
+        className="card-credit header-solid h-ful mb-24"
+      >
+        <h5 className="card-number">Abilda Khaknazar</h5>
+        <div className="card-footer">
+          <div className="mr-30">
+            <p>Card Holder</p>
+            <h6>Jack Peterson</h6>
+          </div>
+          <div className="mr-30">
+            <p>Expires</p>
+            <h6>11/22</h6>
+          </div>
+          <div className="card-footer-col col-logo ml-auto">
+            <img src={mastercard} alt="mastercard" />
+          </div>
+        </div>
+      </Card>
+      <Row>
         <Col xs={24} md={16}>
           <Row gutter={[24, 0]}>
-            <Col xs={24} xl={12} className="mb-24">
-              <Card
-                title={wifi}
-                bordered={false}
-                className="card-credit header-solid h-ful"
-              >
-                <h5 className="card-number">4562 1122 4594 7852</h5>
-
-                <div className="card-footer">
-                  <div className="mr-30">
-                    <p>Card Holder</p>
-                    <h6>Jack Peterson</h6>
-                  </div>
-                  <div className="mr-30">
-                    <p>Expires</p>
-                    <h6>11/22</h6>
-                  </div>
-                  <div className="card-footer-col col-logo ml-auto">
-                    <img src={mastercard} alt="mastercard" />
-                  </div>
-                </div>
-              </Card>
-            </Col>
-            <Col xs={12} xl={6} className="mb-24">
+            {/* <Col xs={12} xl={6} className="mb-24">
               <Card bordered={false} className="widget-2 h-full">
                 <Statistic
                   title={
@@ -406,10 +410,10 @@ function Portfolio() {
                   </Col>
                 </Row>
               </Card>
-            </Col>
+            </Col> */}
           </Row>
         </Col>
-        <Col span={24} md={8} className="mb-24">
+        {/* <Col span={24} md={8} className="mb-24">
           <Card
             bordered={false}
             className="header-solid h-full ant-invoice-card"
@@ -437,106 +441,98 @@ function Portfolio() {
               )}
             />
           </Card>
-        </Col>
+        </Col> */}
       </Row>
       <Row gutter={[24, 0]}>
-        <Col span={24} md={16} className="mb-24">
+        <Col span={24} md={14} className="mb-24">
           <Card
             className="header-solid h-full"
             bordered={false}
-            title={[<h6 className="font-semibold m-0">Billing Information</h6>]}
+            title={[<h6 className="font-semibold m-0">Personal Description</h6>]}
             bodyStyle={{ paddingTop: "0" }}
           >
             <Row gutter={[24, 24]}>
-              {information.map((i, index) => (
-                <Col span={24} key={index}>
-                  <Card className="card-billing-info" bordered="false">
-                    <div className="col-info">
-                      <Descriptions title="Oliver Liam">
-                        <Descriptions.Item label="Company Name" span={3}>
-                          Viking Burrito
-                        </Descriptions.Item>
-
-                        <Descriptions.Item label="Email Address" span={3}>
-                          oliver@burrito.com
-                        </Descriptions.Item>
-                        <Descriptions.Item label="VAT Number" span={3}>
-                          FRB1235476
-                        </Descriptions.Item>
-                      </Descriptions>
+              <Col span={24}>
+                <Card className="card-billing-info" bordered="false">
+                  <div className="col-info">
+                    <Descriptions title="Personal Data" className="mb-24">
+                    </Descriptions>
+                    <div className="mb-24">
+                      <p>Full name</p>
+                      <Input value='Abilda Khaknazar' />
                     </div>
-                    <div className="col-action">
-                      <Button type="link" danger>
-                        {deletebtn}DELETE
-                      </Button>
-                      <Button type="link" className="darkbtn">
-                        {pencil} EDIT
-                      </Button>
+                    <div className="mb-24">
+                      <p>Sex</p>
+                      <Input value='Male' />
                     </div>
-                  </Card>
-                </Col>
-              ))}
+                    <div className="mb-24">
+                      <p>School</p>
+                      <Input value='International School of Nur-Sultan' />
+                    </div>
+                    <div className="mb-24">
+                      <p>Country</p>
+                      <Input value='Kazakhstan' />
+                    </div>
+                    <div className="mb-24">
+                      <p>City</p>
+                      <Input value='Nur-Sultan' />
+                    </div>
+                    <div className="mb-24">
+                      <p>Postcode</p>
+                      <Input value='010000' />
+                    </div>
+                  </div>
+                </Card>
+              </Col>
+              <Col span={24}>
+                <Card className="card-billing-info" bordered="false">
+                  <div className="col-info">
+                    <Descriptions title="Motivational Letter">
+                      <Descriptions.Item label="Description" span={6}>
+                        <p style={{ fontWeight: '500', fontSize: '13px' }}>A motivation letter is a document detailing your professional skills and reasons for applying for a university.</p>
+                      </Descriptions.Item>
+                    </Descriptions>
+                    <div>
+                      <Title level={5}>Write it here</Title>
+                      <TextArea rows={10} />
+                    </div>
+                  </div>
+                </Card>
+              </Col>
             </Row>
           </Card>
         </Col>
-        <Col span={24} md={8} className="mb-24">
+        <Col span={24} md={10} className="mb-24">
           <Card
             bordered={false}
             bodyStyle={{ paddingTop: 0 }}
-            className="header-solid h-full  ant-list-yes"
-            title={<h6 className="font-semibold m-0">Your Transactions</h6>}
+            className="header-solid h-full ant-list-yes"
+            title={<h6 className="font-semibold m-0">Achievements</h6>}
             extra={
               <p className="card-header-date">
                 {calender}
-                <span>23 - 30 March 2021</span>
+                <span>23 - 30 April 2022</span>
               </p>
             }
           >
             <List
-              header={<h6>NEWEST</h6>}
+              header={<h6>RECENT</h6>}
               className="transactions-list ant-newest"
+              style={{padding: '16px'}}
               itemLayout="horizontal"
               dataSource={newest}
               renderItem={(item) => (
-                <List.Item>
-                  <List.Item.Meta
-                    avatar={
-                      <Avatar size="small" className={item.textclass}>
-                        {item.avatar}
-                      </Avatar>
-                    }
-                    title={item.title}
-                    description={item.description}
+                <div key={item}>
+                  <Image
+                    src={event1}
+                    style={{ borderRadius: '8px' }}
                   />
-                  <div className="amount">
-                    <span className={item.amountcolor}>{item.amount}</span>
-                  </div>
-                </List.Item>
+                  <p style={{ fontSize: '1rem', fontWeight: '600' }}>Participating In Physics Olimpics</p>
+                  <p>Date added: 9th December, 2021</p>
+                </div>
               )}
             />
-
-            <List
-              className="yestday transactions-list"
-              header={<h6>YESTERDAY</h6>}
-              itemLayout="horizontal"
-              dataSource={yesterday}
-              renderItem={(item) => (
-                <List.Item>
-                  <List.Item.Meta
-                    avatar={
-                      <Avatar size="small" className={item.textclass}>
-                        {item.avatar}
-                      </Avatar>
-                    }
-                    title={item.title}
-                    description={item.description}
-                  />
-                  <div className="amount">
-                    <span className={item.amountcolor}>{item.amount}</span>
-                  </div>
-                </List.Item>
-              )}
-            />
+            <Button style={{width: '100%'}}>Upload</Button>
           </Card>
         </Col>
       </Row>

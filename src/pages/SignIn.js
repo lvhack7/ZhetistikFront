@@ -1,14 +1,3 @@
-/*!
-=========================================================
-* Muse Ant Design Dashboard - v1.0.0
-=========================================================
-* Product Page: https://www.creative-tim.com/product/muse-ant-design-dashboard
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/muse-ant-design-dashboard/blob/main/LICENSE.md)
-* Coded by Creative Tim
-=========================================================
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -127,21 +116,15 @@ export default class SignIn extends Component {
       <>
         <Layout className="layout-default layout-signin">
           <Header>
-            <div className="header-col header-brand">
-              <h5>Muse Dashboard</h5>
+            <div className="header-col header-brand" style={{ marginTop: '20px' }}>
+              <h4>Zhetistik</h4>
             </div>
             <div className="header-col header-nav">
               <Menu mode="horizontal" defaultSelectedKeys={["1"]}>
                 <Menu.Item key="1">
-                  <Link to="/dashboard">
+                  <Link to="/">
                     {template}
-                    <span> Dashboard</span>
-                  </Link>
-                </Menu.Item>
-                <Menu.Item key="2">
-                  <Link to="/profile">
-                    {profile}
-                    <span>Profile</span>
+                    <span>Home</span>
                   </Link>
                 </Menu.Item>
                 <Menu.Item key="3">
@@ -150,23 +133,14 @@ export default class SignIn extends Component {
                     <span> Sign Up</span>
                   </Link>
                 </Menu.Item>
-                <Menu.Item key="4">
-                  <Link to="/sign-in">
-                    {signin}
-                    <span> Sign In</span>
-                  </Link>
-                </Menu.Item>
               </Menu>
-            </div>
-            <div className="header-col header-btn">
-              <Button type="primary">FREE DOWNLOAD</Button>
             </div>
           </Header>
           <Content className="signin">
             <Row gutter={[24, 0]} justify="space-around">
               <Col
                 xs={{ span: 24, offset: 0 }}
-                lg={{ span: 6, offset: 2 }}
+                lg={{ span: 12, offset: 2 }}
                 md={{ span: 12 }}
               >
                 <Title className="mb-15">Sign In</Title>
@@ -222,7 +196,7 @@ export default class SignIn extends Component {
                       htmlType="submit"
                       style={{ width: "100%" }}
                     >
-                      SIGN IN
+                      <Link to="/dashboard">SIGN IN</Link>
                     </Button>
                   </Form.Item>
                   <p className="font-semibold text-muted">
@@ -233,7 +207,7 @@ export default class SignIn extends Component {
                   </p>
                 </Form>
               </Col>
-              <Col
+              {/* <Col
                 className="sign-img"
                 style={{ padding: 12 }}
                 xs={{ span: 24 }}
@@ -241,18 +215,10 @@ export default class SignIn extends Component {
                 md={{ span: 12 }}
               >
                 <img src={signinbg} alt="" />
-              </Col>
+              </Col> */}
             </Row>
           </Content>
           <Footer>
-            <Menu mode="horizontal">
-              <Menu.Item>Company</Menu.Item>
-              <Menu.Item>About Us</Menu.Item>
-              <Menu.Item>Teams</Menu.Item>
-              <Menu.Item>Products</Menu.Item>
-              <Menu.Item>Blogs</Menu.Item>
-              <Menu.Item>Pricing</Menu.Item>
-            </Menu>
             <Menu mode="horizontal" className="menu-nav-social">
               <Menu.Item>
                 <Link to="#">{<DribbbleOutlined />}</Link>
@@ -281,7 +247,7 @@ export default class SignIn extends Component {
             </Menu>
             <p className="copyright">
               {" "}
-              Copyright © 2021 Muse by <a href="#pablo">Creative Tim</a>.{" "}
+              Copyright © 2022 Zhetistik by <a href="#pablo">Re Vera</a>.{" "}
             </p>
           </Footer>
         </Layout>

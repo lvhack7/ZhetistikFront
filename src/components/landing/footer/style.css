@@ -1,0 +1,11 @@
+.landing-footer {
+    background-color: #45f7ad;
+    padding: 1rem;
+    width: 100%;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
