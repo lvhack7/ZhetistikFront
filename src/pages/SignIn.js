@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Layout,
@@ -18,6 +18,7 @@ import {
   InstagramOutlined,
   GithubOutlined,
 } from "@ant-design/icons";
+import { login } from "../services/userApi";
 function onChange(checked) {
   console.log(`switch to ${checked}`);
 }
@@ -103,15 +104,17 @@ const signin = [
     />
   </svg>,
 ];
-export default class SignIn extends Component {
-  render() {
-    const onFinish = (values) => {
-      console.log("Success:", values);
-    };
+function SignIn () {
+    const [email, setEmail] = useState()
+    const [pass, setPass] = useState()
 
-    const onFinishFailed = (errorInfo) => {
-      console.log("Failed:", errorInfo);
-    };
+    const submitForm = async () => {
+      const res = await login({email: email, password: pass})
+
+      if(res.status === 200) alert("You have logined!")
+      else alert("Something went wrong! Try checking your data)")
+    } 
+
     return (
       <>
         <Layout className="layout-default layout-signin">
@@ -148,8 +151,6 @@ export default class SignIn extends Component {
                   Enter your email and password to sign in
                 </Title>
                 <Form
-                  onFinish={onFinish}
-                  onFinishFailed={onFinishFailed}
                   layout="vertical"
                   className="row-col"
                 >
@@ -164,7 +165,7 @@ export default class SignIn extends Component {
                       },
                     ]}
                   >
-                    <Input placeholder="Email" />
+                    <Input placeholder="Email" value={email} onChange={e => setEmail(e.target.value)}/>
                   </Form.Item>
 
                   <Form.Item
@@ -178,7 +179,7 @@ export default class SignIn extends Component {
                       },
                     ]}
                   >
-                    <Input placeholder="Password" />
+                    <Input placeholder="Password" type="password" value={pass} onChange={e => setPass(e.target.value)}/>
                   </Form.Item>
 
                   <Form.Item
@@ -195,8 +196,9 @@ export default class SignIn extends Component {
                       type="primary"
                       htmlType="submit"
                       style={{ width: "100%" }}
+                      onClick={submitForm}
                     >
-                      <Link to="/dashboard">SIGN IN</Link>
+                      SIGN IN
                     </Button>
                   </Form.Item>
                   <p className="font-semibold text-muted">
@@ -253,5 +255,6 @@ export default class SignIn extends Component {
         </Layout>
       </>
     );
-  }
 }
+
+export default SignIn

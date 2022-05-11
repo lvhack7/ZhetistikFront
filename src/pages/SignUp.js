@@ -1,15 +1,4 @@
-/*!
-=========================================================
-* Muse Ant Design Dashboard - v1.0.0
-=========================================================
-* Product Page: https://www.creative-tim.com/product/muse-ant-design-dashboard
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/muse-ant-design-dashboard/blob/main/LICENSE.md)
-* Coded by Creative Tim
-=========================================================
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-import React, { Component } from "react";
+import React, { useState } from "react";
 import {
   Layout,
   Menu,
@@ -19,6 +8,7 @@ import {
   Form,
   Input,
   Checkbox,
+  Select,
 } from "antd";
 import logo1 from "../assets/images/logos-facebook.svg";
 import logo2 from "../assets/images/logo-apple.svg";
@@ -31,9 +21,11 @@ import {
   InstagramOutlined,
   GithubOutlined,
 } from "@ant-design/icons";
+import { register } from "../services/userApi";
 
 const { Title } = Typography;
 const { Header, Footer, Content } = Layout;
+const { Option } = Select;
 const template = [
   <svg
     data-v-4ebdc598=""
@@ -113,41 +105,50 @@ const signin = [
       d="M12.25,14H1.75A1.752,1.752,0,0,1,0,12.25V3.5A1.752,1.752,0,0,1,1.75,1.75h.876V.875a.875.875,0,0,1,1.75,0V1.75h5.25V.875a.875.875,0,0,1,1.75,0V1.75h.875A1.752,1.752,0,0,1,14,3.5v8.75A1.752,1.752,0,0,1,12.25,14ZM3.5,4.375a.875.875,0,0,0,0,1.75h7a.875.875,0,0,0,0-1.75Z"
     />
   </svg>,
-];
-export default class SignUp extends Component {
-  render() {
-    const onFinish = (values) => {
-      console.log("Success:", values);
-    };
+]
+function SignUp (){
+    const [name, setName] = useState()
+    const [first, setFirst] = useState()
+    const [family, setFamily] = useState()
+    const [email, setEmail] = useState()
+    const [role, setRole] = useState()
+    const [phone, setPhone] = useState()
+    const [pass, setPass] = useState()
 
-    const onFinishFailed = (errorInfo) => {
-      console.log("Failed:", errorInfo);
-    };
+    const handleRole = (value) => {
+      setRole(value)
+    }
+
+    const submitForm = async () => {
+      console.log({
+        name: name, first: first, last: family, email: email, role: "Candidate", phone: phone, pass: pass 
+      })
+      const res = await register({
+        name: name, first: first, last: family, email: email, role: 'Candidate', phone: phone, pass: pass 
+      })
+
+      console.log(res)
+
+      if(res.status === 200) {
+        alert("You have successfully registered! Now confirm your email sent to your address and then login)")
+      } else {
+        alert("Something went wron! Please try checking your data.")
+      }
+    }
+
     return (
       <>
         <div className="layout-default ant-layout layout-sign-up">
           <Header>
             <div className="header-col header-brand">
-              <h5>Muse Dashboard</h5>
+              <h5>Zhetistik</h5>
             </div>
             <div className="header-col header-nav">
               <Menu mode="horizontal" defaultSelectedKeys={["1"]}>
                 <Menu.Item key="1">
                   <Link to="/dashboard">
                     {template}
-                    <span> Dashboard</span>
-                  </Link>
-                </Menu.Item>
-                <Menu.Item key="2">
-                  <Link to="/profile">
-                    {profile}
-                    <span>Profile</span>
-                  </Link>
-                </Menu.Item>
-                <Menu.Item key="3">
-                  <Link to="/sign-up">
-                    {signup}
-                    <span> Sign Up</span>
+                    <span>Home</span>
                   </Link>
                 </Menu.Item>
                 <Menu.Item key="4">
@@ -194,17 +195,31 @@ export default class SignUp extends Component {
               <Form
                 name="basic"
                 initialValues={{ remember: true }}
-                onFinish={onFinish}
-                onFinishFailed={onFinishFailed}
                 className="row-col"
               >
                 <Form.Item
-                  name="Name"
+                  name="Username"
                   rules={[
-                    { required: true, message: "Please input your username!" },
+                    { required: true, message: "Please input your use+rrname!" },
                   ]}
                 >
-                  <Input placeholder="Name" />
+                  <Input placeholder="Username" value={name} onChange={(e) => setName(e.target.value)}/>
+                </Form.Item>
+                <Form.Item
+                  name="firstname"
+                  rules={[
+                    { required: true, message: "Please input your first name!" },
+                  ]}
+                >
+                  <Input placeholder="First name" value={first} onChange={(e) => setFirst(e.target.value)}/>
+                </Form.Item>
+                <Form.Item
+                  name="lastname"
+                  rules={[
+                    { required: true, message: "Please input your last name!" },
+                  ]}
+                >
+                  <Input placeholder="Last name" value={family} onChange={(e) => setFamily(e.target.value)}/>
                 </Form.Item>
                 <Form.Item
                   name="email"
@@ -212,7 +227,25 @@ export default class SignUp extends Component {
                     { required: true, message: "Please input your email!" },
                   ]}
                 >
-                  <Input placeholder="email" />
+                  <Input placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                </Form.Item>
+                <Form.Item
+                  name="phone"
+                  rules={[
+                    { required: true, message: "Please input your phone number" }
+                  ]}
+                >
+                  <Input placeholder="Phone number" type="tel" onChange={(e) => setPhone(e.target.value)}/>
+                </Form.Item>
+                <Form.Item
+                  name="role"
+                  rules={[
+                    { required: true, message: "Please select your role" }
+                  ]}
+                >
+                  <Select defaultValue="Candidate" onChange={handleRole}>
+                    <Option value="Candidate">Candidate</Option>
+                  </Select>
                 </Form.Item>
                 <Form.Item
                   name="password"
@@ -220,9 +253,8 @@ export default class SignUp extends Component {
                     { required: true, message: "Please input your password!" },
                   ]}
                 >
-                  <Input placeholder="Passwoed" />
+                  <Input placeholder="Password" type="password" value={pass} onChange={e => setPass(e.target.value)}/>
                 </Form.Item>
-
                 <Form.Item name="remember" valuePropName="checked">
                   <Checkbox>
                     I agree the{" "}
@@ -237,6 +269,7 @@ export default class SignUp extends Component {
                     style={{ width: "100%" }}
                     type="primary"
                     htmlType="submit"
+                    onClick={submitForm}
                   >
                     SIGN UP
                   </Button>
@@ -292,6 +325,7 @@ export default class SignUp extends Component {
           </Footer>
         </div>
       </>
-    );
-  }
+  )
 }
+
+export default SignUp
