@@ -166,35 +166,35 @@ body {
   .ant-layout-sider.sider-primary.ant-layout-sider-primary
   .ant-menu-item.ant-menu-item-selected
   .active
-  .icon,
+  .icon-d,
 .layout-dashboard
   .ant-layout-sider.sider-primary.ant-layout-sider-primary
   .ant-menu-item
   .active
-  .icon {
+  .icon-d {
   background-color: #1890ff;
 }
 .layout-dashboard
   .ant-layout-sider.sider-primary
   .ant-menu-item.ant-menu-item-selected
   .active
-  .icon,
-.layout-dashboard .ant-layout-sider.sider-primary .ant-menu-item .active .icon,
+  .icon-d,
+.layout-dashboard .ant-layout-sider.sider-primary .ant-menu-item .active .icon-d,
 .layout-dashboard
   .ant-layout-sider.sider-primary
   .ant-menu-submenu.ant-menu-item-selected
   .active
-  .icon,
+  .icon-d,
 .layout-dashboard
   .ant-layout-sider.sider-primary
   .ant-menu-submenu
   .active
-  .icon {
+  .icon-d {
   background-color: #1890ff;
 }
 
-.layout-dashboard .ant-layout-sider.sider-primary .ant-menu-item .icon,
-.layout-dashboard .ant-layout-sider.sider-primary .ant-menu-submenu .icon {
+.layout-dashboard .ant-layout-sider.sider-primary .ant-menu-item .icon-d,
+.layout-dashboard .ant-layout-sider.sider-primary .ant-menu-submenu .icon-d {
   display: inline-flex;
   width: 32px;
   height: 32px;
@@ -288,10 +288,10 @@ body {
 .layout-dashboard
   .ant-layout-sider.sider-primary.ant-layout-sider-primary
   .footer-box
-  .icon {
+  .icon-d {
   background-color: #fff;
 }
-.layout-dashboard .ant-layout-sider.sider-primary .footer-box .icon {
+.layout-dashboard .ant-layout-sider.sider-primary .footer-box .icon-d {
   display: inline-flex;
   width: 32px;
   height: 32px;
@@ -2329,7 +2329,7 @@ section.ant-layout.layout-content .ant-layout-content.content-ant {
   padding-top: 0px;
 }
 
-.widget-2 .icon {
+.widget-2 .icon-d {
   width: 64px;
   height: 64px;
   margin: auto;
@@ -2365,7 +2365,7 @@ section.ant-layout.layout-content .ant-layout-content.content-ant {
 .widget-2 .ant-card-body {
   padding: 0;
 }
-.widget-2 .icon img {
+.widget-2 .icon-d img {
   width: 30px;
 }
 
@@ -2833,8 +2833,8 @@ section.ant-layout.ant-layout-has-sider.layout-dashboard.layout-profile
   overflow-x: hidden;
 }
 
-.layout-dashboard-rtl .ant-layout-sider.sider-primary .ant-menu-item .icon,
-.layout-dashboard-rtl .ant-layout-sider.sider-primary .ant-menu-submenu .icon {
+.layout-dashboard-rtl .ant-layout-sider.sider-primary .ant-menu-item .icon-d,
+.layout-dashboard-rtl .ant-layout-sider.sider-primary .ant-menu-submenu .icon-d {
   margin-left: 11px;
   margin-right: 0;
 }

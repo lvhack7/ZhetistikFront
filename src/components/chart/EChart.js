@@ -76,13 +76,12 @@ function EChart() {
               className="shape-avatar"
               shape="square"
               size={30}
-              src={logo1}
             ></Avatar>
             <div className="avatar-info">
-              <Title level={5}>MIT</Title>
+              <Title level={5}>Harvard</Title>
               <Link to={{
                 pathname: 'https://www.mit.edu/'
-              }}>mit.edu</Link>
+              }}>harvard.edu</Link>
             </div>
           </Avatar.Group>{" "}
         </>
@@ -98,7 +97,7 @@ function EChart() {
       ranking: (
         <>
           <Title level={5}>
-            #1
+            #3
           </Title>
         </>
       ),
@@ -112,13 +111,12 @@ function EChart() {
               className="shape-avatar"
               shape="square"
               size={30}
-              src={logo1}
             ></Avatar>
             <div className="avatar-info">
-              <Title level={5}>MIT</Title>
+              <Title level={5}>Yale</Title>
               <Link to={{
                 pathname: 'https://www.mit.edu/'
-              }}>mit.edu</Link>
+              }}>yale.edu</Link>
             </div>
           </Avatar.Group>{" "}
         </>
@@ -134,7 +132,7 @@ function EChart() {
       ranking: (
         <>
           <Title level={5}>
-            #1
+            #5
           </Title>
         </>
       ),
@@ -148,13 +146,12 @@ function EChart() {
               className="shape-avatar"
               shape="square"
               size={30}
-              src={logo1}
             ></Avatar>
             <div className="avatar-info">
-              <Title level={5}>MIT</Title>
+              <Title level={5}>University of Edinburgh</Title>
               <Link to={{
                 pathname: 'https://www.mit.edu/'
-              }}>mit.edu</Link>
+              }}>ed.ac.uk/</Link>
             </div>
           </Avatar.Group>{" "}
         </>
@@ -162,7 +159,7 @@ function EChart() {
       country: (
         <>
           <div className="author-info">
-            <Title level={5}>United States</Title>
+            <Title level={5}>United Kingdom</Title>
           </div>
         </>
       ),
@@ -170,7 +167,7 @@ function EChart() {
       ranking: (
         <>
           <Title level={5}>
-            #1
+            #14
           </Title>
         </>
       ),
@@ -180,8 +177,8 @@ function EChart() {
   return (
     <>
       <div>
-        <Title level={5} style={{fontWeight: '700'}}>My universities</Title>
-        <div className="table-responsive" style={{marginTop: '2rem'}}>
+        <Title level={5} style={{ fontWeight: '700' }}>My universities</Title>
+        <div className="table-responsive" style={{ marginTop: '2rem' }}>
           <Table
             columns={columns}
             dataSource={data}

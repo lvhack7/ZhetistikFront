@@ -114,16 +114,15 @@ const dataproject = [
     name: (
       <>
         <Avatar.Group>
-          <Avatar className="shape-avatar" src={logo} size={25} alt="" />
           <div className="avatar-info">
-            <Title level={5}>Massachusets Institute of Technology</Title>
+            <Title level={5}>Harvard University</Title>
           </div>
         </Avatar.Group>
       </>
     ),
     ranking: (
       <>
-        <div className="semibold">#1</div>
+        <div className="semibold">#3</div>
       </>
     ),
     applied: (
@@ -138,7 +137,7 @@ const dataproject = [
     ),
     website: (
       <>
-        <Link to={"https://www.mit.edu/"}>mit.edu</Link>
+        <Link to={"https://www.mit.edu/"}>harvard.edu</Link>
       </>
     )
   },
@@ -148,16 +147,15 @@ const dataproject = [
     name: (
       <>
         <Avatar.Group>
-          <Avatar className="shape-avatar" src={logo} size={25} alt="" />
           <div className="avatar-info">
-            <Title level={5}>Massachusets Institute of Technology</Title>
+            <Title level={5}>Yale University</Title>
           </div>
         </Avatar.Group>
       </>
     ),
     ranking: (
       <>
-        <div className="semibold">#1</div>
+        <div className="semibold">#5</div>
       </>
     ),
     applied: (
@@ -172,7 +170,7 @@ const dataproject = [
     ),
     website: (
       <>
-        <Link to={"https://www.mit.edu/"}>mit.edu</Link>
+        <Link to={"https://www.mit.edu/"}>yale.edu</Link>
       </>
     )
   },
@@ -182,99 +180,30 @@ const dataproject = [
     name: (
       <>
         <Avatar.Group>
-          <Avatar className="shape-avatar" src={logo} size={25} alt="" />
           <div className="avatar-info">
-            <Title level={5}>Massachusets Institute of Technology</Title>
+            <Title level={5}>University of Edingurgh</Title>
           </div>
         </Avatar.Group>
       </>
     ),
     ranking: (
       <>
-        <div className="semibold">#1</div>
+        <div className="semibold">#14</div>
       </>
     ),
     applied: (
       <>
-        <div className="text-sm">No</div>
+        <div className="text-sm">Yes</div>
       </>
     ),
     country: (
       <>
-        <Title level={5}>United States</Title>
+        <Title level={5}>United Kingdom</Title>
       </>
     ),
     website: (
       <>
-        <Link to={"https://www.mit.edu/"}>mit.edu</Link>
-      </>
-    )
-  },
-
-  {
-    key: "5",
-    name: (
-      <>
-        <Avatar.Group>
-          <Avatar className="shape-avatar" src={logo} size={25} alt="" />
-          <div className="avatar-info">
-            <Title level={5}>Massachusets Institute of Technology</Title>
-          </div>
-        </Avatar.Group>
-      </>
-    ),
-    ranking: (
-      <>
-        <div className="semibold">#1</div>
-      </>
-    ),
-    applied: (
-      <>
-        <div className="text-sm">No</div>
-      </>
-    ),
-    country: (
-      <>
-        <Title level={5}>United States</Title>
-      </>
-    ),
-    website: (
-      <>
-        <Link to={"https://www.mit.edu/"}>mit.edu</Link>
-      </>
-    )
-  },
-
-  {
-    key: "6",
-    name: (
-      <>
-        <Avatar.Group>
-          <Avatar className="shape-avatar" src={"/mit_logo.jpg"} size={25} alt="" />
-          <div className="avatar-info">
-            <Title level={5}>Massachusets Institute of Technology</Title>
-          </div>
-        </Avatar.Group>
-      </>
-    ),
-    ranking: (
-      <>
-        <div className="semibold">#1</div>
-      </>
-    ),
-    applied: (
-      <>
-        <div className="text-sm">No</div>
-      </>
-    ),
-    country: (
-      <>
-        <Title level={5}>United States</Title>
-      </>
-    ),
-    website: (
-      <>
-        <Link to={"https://www.mit.edu/"}>mit.edu</Link>
+        <Link to={"https://www.mit.edu/"}>ed.ac.uk/</Link>
       </>
     )
   },

@@ -7,7 +7,7 @@ function LandingNavbar() {
 
     return <div className='landing-navbar'>
         <div>
-            <img src="/logo.svg" alt="..." width={70} />
+            <p className='logo'>Zhetistik</p>
         </div>
         <div className='links'>
             <a className='link'>Companies</a>

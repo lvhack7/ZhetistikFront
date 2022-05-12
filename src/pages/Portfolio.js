@@ -269,14 +269,6 @@ function Portfolio() {
       textclass: "text-light-danger",
       amountcolor: "text-danger",
     },
-    {
-      avatar: <PlusOutlined style={{ fontSize: 10 }} />,
-      title: "Apple",
-      description: "27 March 2021, at 04:30 AM",
-      amount: "+ $2,000",
-      textclass: "text-fill",
-      amountcolor: "text-success",
-    },
   ];
   const yesterday = [
     {
@@ -321,19 +313,7 @@ function Portfolio() {
         className="card-credit header-solid h-ful mb-24"
       >
         <h5 className="card-number">Abilda Khaknazar</h5>
-        <div className="card-footer">
-          <div className="mr-30">
-            <p>Card Holder</p>
-            <h6>Jack Peterson</h6>
-          </div>
-          <div className="mr-30">
-            <p>Expires</p>
-            <h6>11/22</h6>
-          </div>
-          <div className="card-footer-col col-logo ml-auto">
-            <img src={mastercard} alt="mastercard" />
-          </div>
-        </div>
+
       </Card>
       <Row>
         <Col xs={24} md={16}>
@@ -518,7 +498,7 @@ function Portfolio() {
             <List
               header={<h6>RECENT</h6>}
               className="transactions-list ant-newest"
-              style={{padding: '16px'}}
+              style={{ padding: '16px' }}
               itemLayout="horizontal"
               dataSource={newest}
               renderItem={(item) => (
@@ -532,7 +512,7 @@ function Portfolio() {
                 </div>
               )}
             />
-            <Button style={{width: '100%'}}>Upload</Button>
+            <Button style={{ width: '100%' }}>Upload</Button>
           </Card>
         </Col>
       </Row>
